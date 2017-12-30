@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Etch-A-Sketch</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet'>
+</head>
+	<h1>Etch-A-Sketch</h1>
+	<h5>An online canvas with adjustable tile size and fill color.</h5>
+	<form id="frm">
+		<h5 class="question">How many squares per side? [3 to 100]</h5>
+		<div id="id1">
+			<input id="squares_per_side" type="number" name="squares_per_side" value="30" max="100" min="3">
+			<input class = "btn2" type="button" name="submit_number" id="submit_number" value="Submit">
+		</div>
+		<h5 class="question">Fill color</h5>
+		<input type="Color" name="fil color" id="fill_color" value="#557A95">
+	</form>
+	<div id="GridArea">
+	</div>
+	<div id="id1">
+		<button class="btn">Reset</button>
+	</div>
+<body>
+
+</body>
+
+<script type="text/javascript" src="script.js"></script>
+</html>
