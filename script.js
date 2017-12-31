@@ -5,9 +5,17 @@ let form = document.getElementById('frm');
 let square_form = document.getElementById('submit_number');
 let number_square_form = document.getElementById('squares_per_side')
 let fill_color = document.getElementById('fill_color');
+let checkbox = document.getElementById('checkbox');
 let square_per_side = 30;
 let Squares = null;
 
+function RandomColor() {
+  var letters = '0123456789ABCDEF';
+  var color = '#';
+  for (var i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;}
 function GridMake(number){
 
 	if (Squares!= null){
@@ -33,7 +41,12 @@ function Paint(){
 		{
 			hover_square.addEventListener('mouseenter', (e) =>
 			{
-				hover_square.style.backgroundColor = fill_color.value;
+				if (checkbox.checked == false){
+				hover_square.style.backgroundColor = fill_color.value;}
+				else{
+				hover_square.style.backgroundColor = RandomColor();
+				}
+
 			})
 		})}
 
